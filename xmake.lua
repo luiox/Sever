@@ -1,11 +1,17 @@
+set_project("Sever")
+set_version("0.1.0")
+set_xmakever("2.8.1")
+
+
 add_rules("mode.debug", "mode.release")
+add_rules("plugin.compile_commands.autoupdate", {outputdir = "."})
 
 set_languages("c99", "cxx17")
 
-add_requires("libuv")
+add_requires("libhv","spdlog")
 target("sever")
     set_kind("binary")
-    add_packages("libuv")
+    add_packages("libhv","spdlog")
     add_includedirs("inc")
     add_files("src/**.cpp")
 
