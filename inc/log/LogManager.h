@@ -25,7 +25,7 @@ enum LoggerMode {
 
 #define LOG_MODE USER_MODE
 
-using namespace spdlog;
+
 
 #define LOG_LEVEL_TRACE spdlog::level::trace
 #define LOG_LEVEL_DEBUG spdlog::level::debug
@@ -37,7 +37,7 @@ using namespace spdlog;
 
 using print_level = spdlog::level::level_enum; //变量重命名
 using format_string =
-  string_view_t; // 变量重命名 //wstring_view_t;   //fmt::basic_string_view<char>;
+  spdlog::string_view_t; // 变量重命名 //wstring_view_t;   //fmt::basic_string_view<char>;
 
 class HrgLogger
 {
