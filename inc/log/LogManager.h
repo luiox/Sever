@@ -25,8 +25,6 @@ enum LoggerMode {
 
 #define LOG_MODE USER_MODE
 
-
-
 #define LOG_LEVEL_TRACE spdlog::level::trace
 #define LOG_LEVEL_DEBUG spdlog::level::debug
 #define LOG_LEVEL_INFO spdlog::level::info
