@@ -10,7 +10,9 @@ public:
     MyWebServer(int port = 7777);
     ~MyWebServer();
 
-    void start();
+
+    static void startWebSever(int port = 7777);
+    void run();
 
 private:
     http_server_t* m_sever;

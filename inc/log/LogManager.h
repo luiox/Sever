@@ -153,7 +153,7 @@ public:
         std::cout << "FileLogger Constructor." << std::endl;
     }
 
-    virtual void create_logger();
+    virtual void create_logger() override;
 };
 
 /* 控制台+文件复合logger子类 */

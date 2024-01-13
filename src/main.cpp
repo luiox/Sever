@@ -3,13 +3,13 @@
 #include <hv/HttpServer.h>
 #include <hv/hloop.h>
 #include <hv/hversion.h>
+#include <iostream>
 #include <spdlog/sinks/basic_file_sink.h>
 #include <spdlog/sinks/daily_file_sink.h>
 #include <spdlog/sinks/stdout_sinks.h>
 #include <spdlog/spdlog.h>
-#include <iostream>
 using namespace std;
-const char* SeverVersion = "0.1.0";
+const char * SeverVersion = "0.1.0";
 
 int
 main()
@@ -32,7 +32,7 @@ main()
     // spdlog::info("Server is starting...");
     // spdlog::info("Server verstion is {}", SeverVersion);
     // spdlog::info("Current libhv version: {}", hv_version());
-    
+
     // MyWebServer server;
     // server.start();
 
@@ -40,12 +40,15 @@ main()
 
     // hv::EventLoopPtr loop(new hv::EventLoop);
     // loop->postEvent([](hv::Event *) {
-       
+
     // });
-    
+
     // loop->run();
 
     spdlog::info("Server is starting...");
+
+    // 启动web线程
+    MyWebServer::startWebSever();
 
     hv::HttpService router;
 
